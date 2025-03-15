@@ -4,8 +4,7 @@
 
 void findNumber(int arr[], int tamaño){
   int counter = 0;
-  int maxCounter = 0;
-  int numDef = 0;
+  int maxCounter = 0, numDef;
   for(int i = 0; i < tamaño; i++) {
     maxCounter = 0;
     for(int j = 0; j < tamaño; j++ ){ 
