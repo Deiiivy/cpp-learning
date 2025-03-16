@@ -1,17 +1,18 @@
 #include <iostream>
 #include <string>
 #include "functions.h"
-#include <vector> 
+#include <vector>
 
 int main() {
     std::cout << "AGENDA DE CONTACTOS!!" << std::endl;
     std::vector<Contact> contacts;
-    
+
     char opcion;
     do {
         Contact c;
         std::cout << "Ingrese el nombre de la persona a agendar:\n ";
-        std::cin >> c.name;
+        std::cin.ignore();
+        std::getline(std::cin, c.name);
         std::cout << "Ingrese el telefono de la persona a agendar:\n ";
         std::cin >> c.phone;
 
@@ -25,7 +26,6 @@ int main() {
 
     SaveInTheFile(contacts, nameFile);
     ReadFile(nameFile);
-    
+
     return 0;
 }
-
